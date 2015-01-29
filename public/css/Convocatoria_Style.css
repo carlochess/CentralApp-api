@@ -1,0 +1,23 @@
+/* unvisited link */
+.aConvocatoria:link {
+    color: red;
+    text-decoration: none;
+}
+
+/* visited link */
+.aConvocatoria:visited {
+    color: red;
+    text-decoration: none;
+}
+
+/* mouse over link */
+.aConvocatoria:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/* selected link */
+.aConvocatoria:active {
+    color: red;
+    text-decoration: none;
+}

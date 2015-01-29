@@ -1,0 +1,5 @@
+{
+    "require": {
+        "bullet-proof/image-uploader": ">=1.0.0"
+    }
+}

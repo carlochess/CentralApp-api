@@ -1,0 +1,24 @@
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 20px;position: relative; }
+#map_canvas { 
+    height: 80%; 
+    overflow: hidden;
+}
+#informacion {
+    display: inline;
+    padding: 20px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.sideBar {
+    height: 100%;
+    width: 20%;
+    float: right;
+    position : absolute;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    overflow: visible;
+    z-index: 20;
+}

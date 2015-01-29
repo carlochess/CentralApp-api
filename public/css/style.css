@@ -1,0 +1,283 @@
+.wrapper {
+    background: #fff;
+    margin-top: 0px;
+}
+
+.tituloHeader{
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+}
+
+.grad{
+    background-color: #e9eaed;
+    color: #141823;
+}
+
+/* Top Bar from Unity Bootstrap */
+.topbar 
+{
+    padding: 8px 0;
+    position: relative;
+}
+
+
+.topbar ul.loginbar {
+    margin: 0;
+    margin-right: 30px;
+}
+
+.topbar ul.loginbar > li {
+    display: inline;
+    list-style: none;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.topbar ul.loginbar > li > a, 
+.topbar ul.loginbar > li > a:hover {
+    color: #7c8082;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.topbar ul.loginbar li i.fa { 
+    color: #bbb;
+}
+
+.topbar ul.loginbar li.topbar-devider { 
+    top: -1px;
+    padding: 0;
+    font-size: 8px;
+    position: relative;
+    margin: 0 9px 0 5px;
+    font-family: Tahoma;
+    border-right: solid 1px #bbb;
+}
+
+
+.header {
+    z-index: 99;
+    position: relative;
+    border-bottom: solid 2px #eee;
+    background-color:white;
+}
+
+.header .navbar {
+    margin: 0;
+    min-height: inherit;
+}
+
+.header .navbar-default {
+    border: none;
+    background: none;
+}
+
+.header .navbar-collapse {
+    position: relative;
+    /*max-height: inherit;*/
+}
+
+/*Brand*/
+.header .navbar-brand { 
+    z-index: 1;
+    position: relative;
+    padding: 0 10px 10px 30px;
+    float: left;
+    height: 20px;
+}
+
+.navbar-brand #logo-header
+{
+    margin-top: -10px;
+    height: 80px;   
+    position: relative;
+    float: left;
+}
+
+.header .navbar-nav 
+{
+    float: right;
+}
+
+@media (max-width: 992px) {
+    .header .logo { 
+        top: 0;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .navbar-nav 
+    {
+        float: none;
+    }   
+}
+
+
+.header .navbar-default .navbar-nav > li > a {
+    color: #687074;
+    font-size: 15px;
+    font-weight:400;
+    text-transform: uppercase;
+}
+
+.header .navbar-default .navbar-nav > .active > a {
+    color: #72c02c;
+}
+
+/* Social Links footer from Bootsnip*/
+#social:hover 
+{
+    -webkit-transform:scale(1.1); 
+    -moz-transform:scale(1.1); 
+    -o-transform:scale(1.1); 
+}
+
+#social 
+{
+    -webkit-transform:scale(0.8);
+    -moz-transform:scale(0.8);
+    -o-transform:scale(0.8); 
+    -webkit-transition-duration: 0.5s; 
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}           
+
+.social-fb:hover 
+{
+    color: #3B5998;
+}
+.social-tw:hover 
+{
+    color: #4099FF;
+}
+.social-gp:hover 
+{
+    color: #d34836;
+}
+
+
+.img-miniatura
+{
+    width: 120px;
+    height: 120px;
+}
+
+.img-mediana
+{
+    width: 200px;
+    height: 200px;
+}
+
+.jumbotron{
+    margin-left: 10px;
+    margin-right: 10px;
+    position:relative;
+}
+
+.jumbotron h3{
+    position:relative;
+    text-align: center;
+}
+
+.jumbotron img{
+    position:relative;
+    text-align: center;
+    margin: auto;
+}
+
+.jumbotron span{
+    margin-bottom: 10px;
+}
+
+.zoom{
+    transition: 1.5s ease;
+    -moz-transition: 1.5s ease; /* Firefox */
+    -webkit-transition: 1.5s ease; /* Chrome - Safari */
+    -o-transition: 1.5s ease; /* Opera */
+}
+.zoom:hover{
+    transform : scale(1.05);
+    -moz-transform : scale(1.05); /* Firefox */
+    -webkit-transform : scale(1.05); /* Chrome - Safari */
+    -o-transform : scale(1.05); /* Opera */
+    -ms-transform : scale(1.05); /* IE9 */
+}
+
+.liHeader:hover{
+    background-color: #e8e8e8;
+}
+
+.line-thru {
+    display: block;
+    font-size: .875em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.line-thru:before {
+    width: 40px;
+    height: 10px;
+    background-color: #FFFFFF;
+    content: '';
+    margin: -5px 0 0 -20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+}
+
+.line-thru:after {
+    border-bottom: 1px solid #dfe0e6;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 49%;
+    width: 100%;
+    z-index: -2;
+}
+
+#divSesion{
+    margin-top: 20px;
+}
+
+.separar{
+    margin-top: 50px;
+}
+
+#formBuscar{
+    float: left;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.graficos{
+    width: 70%;
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+
+  text-align: center;  /* align the inline(-block) elements horizontally */
+  font: 0/0 a;         /* remove the gap between inline(-block) elements */
+}
+
+.vertical-center:before {    /* create a full-height inline block pseudo=element */
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+  height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: 100%;
+
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+}
