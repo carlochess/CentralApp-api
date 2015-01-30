@@ -11,9 +11,9 @@ class Noticias extends Controlador {
     }
     
     function /* void */ getNoticiasDia() {
-        $dia = $_POST["dia"]; // En realidad es una fecha
+        $idUltimaNoticia = $_POST["idUltimaNoticia"];
         $modeloNoticias = $this->cargarModelo("noticia");
-        $noticia = $modeloNoticias->getNoticiasDia($dia);
+        $noticia = $modeloNoticias->getNoticiasDia($idUltimaNoticia);
         echo json_encode(array("error"=> 0,"log"=> "Conseguido", "noticias" => $noticia));
     }
 }
