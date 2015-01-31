@@ -10,6 +10,14 @@ class Portal extends Controlador {
         echo "Hola Mundo";
     }
     
+    function pruebagcm() {
+        $str = $_POST["mensaje"];
+        include LIBRERIAS."GCMPushMessage.php";
+        $objGCM = new GCMPushMensaje();
+        $objGCM->setDevices('APA91bEgrhktnhqrm1mqIUDFw53AM-cG-eZVRoni_aSTDuYQlGygi3Zpsp8aJse_XfgiKIyyk7GSDJFJ9P3HcIJCRvA665AOuMvIqk1fe_l_iJGGh3ATJZ_j20zqU0qXfJsZ4qb9LNXE4n-pwSNRQax1L6S9EiCs6HoTetSOynLOfOXDXNMM6-Y');
+        $objGCM->send($str);
+    }
+    
     /*
      * Retorna el:
      *   Estado fila restaurantes
