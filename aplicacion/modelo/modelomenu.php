@@ -15,6 +15,12 @@ class ModeloMenu {
     }
     
     /**  */
+    function /* array(stdObject) */ getMenuDias($qMarks,$dias) {
+        return $this->oMySQL->seleccionar(
+                "SELECT * FROM menu WHERE DATE(fecha) IN ($qMarks)", $dias);
+    }
+    
+    /**  */
     function /* array(stdObject) */ getMenuSemana($dia) {
         return $this->oMySQL->seleccionar(
                 ' ', array($dia));

@@ -18,11 +18,19 @@ class Menu extends Controlador {
         echo json_encode(array("error"=> 0,"log"=> "Conseguido", "menu" => $menu));
     }
     
+    function /* void */ getMenuDias() {
+        $diasPost = $_POST["dias"]; // En realidad es una fecha
+        $dias = explode(",", $diasPost);
+        $qMarks = str_repeat('?,', count($dias) - 1) . '?';
+        $modeloMenu = $this->cargarModelo("menu");
+        $menu = $modeloMenu->getMenuDias($qMarks,$dias);
+        echo json_encode(array("error"=> 0,"log"=> "Conseguido", "menu" => $menu));
+    }
+    
     function /* void */ getMenuSemana() {
         $semana = $_POST["semana"]; // Es un día por lo tanto se toma la semana de dicho día
         $modeloMenu = $this->cargarModelo("menu");
         $menu = $modeloMenu->getMenuSemana($semana);
         echo json_encode(array("error"=> 0,"log"=> "Conseguido", "menu" => $menu)); // Esto deberia ser un arreglo de...
     }
-    
 }
