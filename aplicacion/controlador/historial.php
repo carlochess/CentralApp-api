@@ -17,6 +17,15 @@ class Historial extends Controlador {
         echo json_encode(array("error"=> 0,"log"=> "Conseguido", "registros" => $registros));
     }
     
+    function /* void */ getHistorialSemana() {
+        $diasPost = $_POST["dias"]; // En realidad es una fecha
+        $dias = explode(",", $diasPost);
+        $qMarks = str_repeat('?,', count($dias) - 1) . '?';
+        $modeloHistorial = $this->cargarModelo("historial");
+        $registros = $modeloHistorial->getRegistrosSemana($qMarks,$dias);
+        echo json_encode(array("error"=> 0,"log"=> "Conseguido", "registros" => $registros));
+    }
+    
     function /* void */ getHistorialMes() {
         $fecha = $_POST["mes"]; // En realidad es una fecha con un día cualquiera
         $modeloHistorial = $this->cargarModelo("historial");

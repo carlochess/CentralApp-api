@@ -11,13 +11,19 @@ class ModeloHistorial {
     /**  */
     function /* array(stdObject) */ getRegistrosDia($fecha) {
         return $this->oMySQL->seleccionar(
-                '', array($fecha));
+                'SELECT * FROM estadotemprestaurante WHERE DATE(hora) = DATE( ? )', array($fecha));
+    }
+    
+    /**  */
+    function /* array(stdObject) */ getRegistrosSemana($qMarks, $dias) {
+        return $this->oMySQL->ejecutarConsultaSelect(
+                "SELECT * FROM estadotemprestaurante WHERE DATE(hora) IN ($qMarks)", array($dias));
     }
     
     /**  */
     function /* array(stdObject) */ getRegistrosMes($fecha) {
         return $this->oMySQL->ejecutarConsultaSelect(
-                '', array($fecha));
+                'SELECT * FROM estadotemprestaurante WHERE YEAR(hora) = YEAR(?) AND MONTH(hora) = MONTH(?)', array($fecha,$fecha));
     }
 
 }

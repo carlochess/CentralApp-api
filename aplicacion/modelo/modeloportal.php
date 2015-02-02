@@ -17,13 +17,13 @@ class ModeloPortal {
     /**  */
     function /* array(stdObject) */ estadoRestaurante($dia) {
         return $this->oMySQL->seleccionar(
-                'SELECT calificacion FROM estadotemprestaurante ORDER BY idEstado DESC LIMIT 1', array());
+                'SELECT calificacion FROM estadotemprestaurante ORDER BY hora DESC LIMIT 1', array());
     }
     
     /**  */
     function /* array(stdObject) */ estadoTickets($dia) {
         return $this->oMySQL->seleccionar(
-                'SELECT calificacion FROM estadotemptickets ORDER BY idEstado DESC LIMIT 1', array());
+                'SELECT calificacion FROM estadotemptickets ORDER BY hora DESC LIMIT 1', array());
     }
 
     function /* void */ insertarVotoRestaurante($fecha, $hora, $valorVoto){
