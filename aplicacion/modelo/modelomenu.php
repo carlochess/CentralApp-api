@@ -21,9 +21,9 @@ class ModeloMenu {
     }
     
     /**  */
-    function /* array(stdObject) */ getMenuSemana($dia) {
+    function /* array(stdObject) */ getMenuSemana($numSemana) {
         return $this->oMySQL->seleccionar(
-                ' ', array($dia));
+                'SELECT * FROM menu WHERE semana=?', array($numSemana));
     }
 
 }

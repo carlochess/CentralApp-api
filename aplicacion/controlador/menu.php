@@ -28,7 +28,7 @@ class Menu extends Controlador {
     }
     
     function /* void */ getMenuSemana() {
-        $semana = $_POST["semana"]; // Es un día por lo tanto se toma la semana de dicho día
+        $semana = $_POST["semana"]; // El número de la semana
         $modeloMenu = $this->cargarModelo("menu");
         $menu = $modeloMenu->getMenuSemana($semana);
         echo json_encode(array("error"=> 0,"log"=> "Conseguido", "menu" => $menu)); // Esto deberia ser un arreglo de...
