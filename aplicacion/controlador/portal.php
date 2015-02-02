@@ -27,7 +27,7 @@ class Portal extends Controlador {
     function /* void */ actualidad() {
         $modeloPortal = $this->cargarModelo("Portal");
         $dia = date('Y-m-d H:i:s');
-        $menuDia = array(new stdClass());//$modeloPortal->getMenuDia($dia);
+        $menuDia = $modeloPortal->getMenuDia($dia);
         $estadoRestaurantes = $modeloPortal->estadoRestaurante($dia);
         $estadoTickets = $modeloPortal->estadoTickets($dia);
         echo json_encode(

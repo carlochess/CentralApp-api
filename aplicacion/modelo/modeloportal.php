@@ -11,7 +11,7 @@ class ModeloPortal {
     /**  */
     function /* array(stdObject) */ getMenuDia($dia) {
         return $this->oMySQL->seleccionar(
-                'SELECT * FROM menu WHERE fecha = ?', array($dia));
+                'SELECT * FROM menu WHERE fecha = date(?)', array($dia));
     }
     
     /**  */
