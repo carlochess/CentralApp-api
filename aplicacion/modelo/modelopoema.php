@@ -20,5 +20,10 @@ class ModeloPoema {
                 'SELECT * FROM poema WHERE idPoema > ? AND idPoema < ? ORDER BY idPoema DESC  LIMIT 10', array($idPoemaInicial, $idPoemaFinal));
     }
 
+    function /* array(stdObject) */ insertarPoema($titulo,$contenido,$fecha,$cuenta,$idTelefono) {
+        return $this->oMySQL->insertar(
+                'INSERT INTO poema(autor, contenido,fecha, cuenta, idTelefono) VALUES (?,?,?,?,?)', array($titulo,$contenido,$fecha,$cuenta,$idTelefono));
+    }
+    
 }
 ?>
