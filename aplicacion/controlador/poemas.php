@@ -31,10 +31,10 @@ class Poemas extends Controlador {
         $titulo = $_POST["titulo"];
         $contenido = $_POST["contenido"];
         $fecha = $_POST["fecha"];
-        $cuenta = $_POST["cuenta"];
         $idTelefono = $_POST["idTelefono"];
+        $autor = $_POST["autor"];
         $modeloPoema = $this->cargarModelo("poema");
-        $idImagenPoema = $modeloPoema->insertarPoema($titulo,$contenido,$fecha,$cuenta,$idTelefono);
+        $idImagenPoema = $modeloPoema->insertarPoema($autor,$contenido,$fecha,$idTelefono,$titulo);
         if(!isset($_FILES) || count($_FILES)==0){
             echo json_encode(array("error"=> 0,"log"=> "Conseguido, sin imagen"));
             return;
