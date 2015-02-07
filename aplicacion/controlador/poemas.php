@@ -36,7 +36,7 @@ class Poemas extends Controlador {
         $modeloPoema = $this->cargarModelo("poema");
         $idImagenPoema = $modeloPoema->insertarPoema($autor,$contenido,$fecha,$idTelefono,$titulo);
         if(!isset($_FILES) || count($_FILES)==0){
-            echo json_encode(array("error"=> 0,"log"=> "Conseguido, sin imagen"));
+            echo json_encode(array("error"=> 0, "idPoema" => $idImagenPoema, "log"=> "Conseguido, sin imagen"));
             return;
         }
         // empezar transacción
@@ -54,6 +54,6 @@ class Poemas extends Controlador {
             return;
         }
         // commit 
-        echo json_encode(array("error"=> 0,"log"=> "Conseguido"));
+        echo json_encode(array("error"=> 0,"idPoema" => $idImagenPoema, "log"=> "Conseguido"));
     }
 }
