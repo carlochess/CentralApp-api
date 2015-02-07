@@ -22,7 +22,7 @@ class ModeloPoema {
 
     function /* array(stdObject) */ insertarPoema($autor,$contenido,$fecha,$idTelefono, $titulo) {
         return $this->oMySQL->insertar(
-                'INSERT INTO poema(autor, contenido,fecha, idTelefono, titulo) VALUES (?,?,?,?,?,?)', array($autor,$contenido,$fecha,$idTelefono, $titulo));
+                'INSERT INTO poema(autor, contenido,fecha, idTelefono, titulo) VALUES (?,?,?,?,?)', array($autor,$contenido,$fecha,$idTelefono, $titulo));
     }
     
 }
