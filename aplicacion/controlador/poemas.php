@@ -33,7 +33,6 @@ class Poemas extends Controlador {
         $fecha = $_POST["fecha"];
         $cuenta = $_POST["cuenta"];
         $idTelefono = $_POST["idTelefono"];
-        echo $titulo." ".$contenido." ".$fecha." ".$cuenta." ".$idTelefono;
         $modeloPoema = $this->cargarModelo("poema");
         $idImagenPoema = $modeloPoema->insertarPoema($titulo,$contenido,$fecha,$cuenta,$idTelefono);
         if(!isset($_FILES) || count($_FILES)==0){

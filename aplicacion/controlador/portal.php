@@ -31,7 +31,7 @@ class Portal extends Controlador {
         $estadoRestaurantes = $modeloPortal->estadoRestaurante($dia);
         $estadoTickets = $modeloPortal->estadoTickets($dia);
         echo json_encode(
-              array("error"=> 0,"log"=> "Conseguido", "menu" => $menuDia[0],
+              array("error"=> 0,"log"=> "Conseguido", "menu" => (count($menuDia)>0)?$menuDia[0]: null,
                   "estadoRestaurantes"=> $estadoRestaurantes[0]->calificacion,"estadoTickets"=> $estadoTickets[0]->calificacion));
     }
     
