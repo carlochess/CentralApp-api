@@ -12,6 +12,14 @@ class Historial extends Controlador {
     
     function /* void */ getHistorialDia() {
         $fecha = $_POST["dia"]; // En realidad es una fecha
+        
+        $dt = new DateTime($fecha);
+        $date = $dt->format('Y-m-d');
+        $hora = $dt->format('H');
+        $minuti = $dt->format('i');
+        $minutoCuartil = ((floor($minuti/15)+1)*15);
+        $fecha = $date.' '.(($minutoCuartil==60)?($hora+1)%24:$hora).':'.(($minutoCuartil==60)?'00':$minutoCuartil).':00';
+        
         $modeloHistorial = $this->cargarModelo("historial");
         $registros = $modeloHistorial->getRegistrosDia($fecha);
         echo json_encode(array("error"=> 0,"log"=> "Conseguido", "registros" => $registros));
