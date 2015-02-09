@@ -11,7 +11,7 @@ class ModeloHistorial {
     /**  */
     function /* array(stdObject) */ getRegistrosDia($fecha) {
         return $this->oMySQL->seleccionar(
-                'SELECT * FROM estadotemprestaurante WHERE DATE(hora) = DATE( ? )', array($fecha));
+                'SELECT * FROM estadotemprestaurante WHERE DATE(hora) = DATE( ? ) AND HOUR(hora)> HOUR( ? ) ORDER BY hora DESC', array($fecha,$fecha));
     }
     
     /**  */
