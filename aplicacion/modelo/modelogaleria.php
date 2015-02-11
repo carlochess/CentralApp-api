@@ -11,7 +11,7 @@ class ModeloGaleria {
     /**  */
     function /* array(stdObject) */ getUltimasImagenes($ultimoId) {
         return $this->oMySQL->seleccionar(
-                'SELECT idImagen,fecha,calificacion FROM imagenrestaurante WHERE idImagen > ? AND calificacion < 5 ORDER BY idImagen DESC LIMIT 10', array($ultimoId));
+                'SELECT idImagen,fecha,calificacion,hora FROM imagenrestaurante WHERE idImagen > ? AND calificacion < 5 ORDER BY idImagen DESC LIMIT 10', array($ultimoId));
     }
     
     /**  */
