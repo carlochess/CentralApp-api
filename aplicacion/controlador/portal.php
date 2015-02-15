@@ -83,6 +83,7 @@ class Portal extends Controlador {
         $fecha = date('Y-m-d');
         $hora = date('H:i:s');
         $valorVoto = floatval($_POST["voto"]);
+        $idCelular = $_POST["id"];
         $modeloPortal = $this->cargarModelo("portal");
         $modeloPortal->insertarVotoTickets($fecha,$hora,$valorVoto);
         if(!isset($_FILES) || count($_FILES)==0){
