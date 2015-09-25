@@ -34,105 +34,35 @@ url: http://uvshop.co/centralapp/galeria
 
 | Función | Parametros | Semántica | Respuesta |
 |---|---|---|---|
-| /getUltimasimagenes 
-| idUltimaImagen 
-| Devuelve las rutas de las últimas imagenes junto con los ids de las imagenes baneadas 
- Ejemplo: /public/imagenes/central.jpg |
-{
-error: ... ,
-log: “”,
-imagenes: [...],
-banneadas: [...]
-}|
-| /denunciarFoto 
-| idImagen
-| Permite a un usuario eliminar una foto que no cumpla con el protocolo
-|{
-error: ... ,
-log: “”,
-}|
-|/getImagenes
-|idImagenInicial
-idImagenFinal
-|Devuelve las imagenes en un intervalo desde 
-(idImagenInicial, idImagenFinal ]
-|
+| /getUltimasimagenes | idUltimaImagen | Devuelve las rutas de las últimas imagenes junto con los ids de las imagenes baneadas Ejemplo: /public/imagenes/central.jpg | { error: ... , log: “”, imagenes: [...], banneadas: [...] }|
+| /denunciarFoto | idImagen | Permite a un usuario eliminar una foto que no cumpla con el protocolo |{error: ... ,log: “”,}|
+|/getImagenes |idImagenInicial idImagenFinal |Devuelve las imagenes en un intervalo desde (idImagenInicial, idImagenFinal ] |
 
 
 ### Historial
 url: http://uvshop.co/centralapp/historial
 
-Función
-Parametros
-Semántica
-Respuesta
-/getHistorialDia
-dia :: Y-m-d
-Devuelve una lista de promedios del día para el estado de los restaurantes
-{
-error: ... ,
-log: “”,
-referegistros: [registros]
-}
-/getHistorialMes
-Mes :: Y-m-d
-Devuelve una lista de promedios del Mes para el estado de los restaurantes
-{
-error: ... ,
-log: “”,
-registros: [registros]
-}
+| Función | Parametros | Semántica | Respuesta |
+|---|---|---|---|
+| /getHistorialDia | dia :: Y-m-d | Devuelve una lista de promedios del día para el estado de los restaurantes | {error: ... ,log: “”,referegistros: [registros]}|
+| /getHistorialMes |Mes :: Y-m-d | Devuelve una lista de promedios del Mes para el estado de los restaurantes{error: ... ,log: “”,registros: [registros]}|
 
 ### Menú
 
 url: http://uvshop.co/centralapp/menu
 
-Función
-Parametros
-Semántica
-
-
-/getMenuDia
-dia:: Y-m-d
-Devuelve el menú correspondiente al día
-{
-error: ... ,
-log: “”,
-menu: [objMenu]
-}
-/getMenuDias
-dias :: Y-m-d
-
-Ejemplo:
-
-29/01/2015,
-30/01/2015,
-31/01/2015
-Devuelve los menús de toda la semana
-{
-error: ... ,
-log: “”,
-menus: [objMenu]
-}
+| Función | Parametros | Semántica | Respuesta |
+|---|---|---|---|
+| /getMenuDia | dia:: Y-m-d | Devuelve el menú correspondiente al día | { error: ... ,log: “”,menu: [objMenu]} |
+| /getMenuDias | dias :: Y-m-d Ejemplo:29/01/2015,30/01/2015,31/01/2015|Devuelve los menús de toda la semana| {error: ... ,log: “”,menus: [objMenu]}|
 
 ### Noticias
 
 url: http://uvshop.co/centralapp/noticias
 
-
-Función
-Parametros
-Semántica
-
-
-/getNoticiasDia
-dia
-Devuelve las noticias del día
-{
-error: ... ,
-log: “”,
-noticias: 
-}
+| Función | Parametros | Semántica | Respuesta |
+|---|---|---|---|
+| /getNoticiasDia | dia | Devuelve las noticias del día | {error: ... ,log: “”,noticias: }|
 
 ## Advertencia
 - Esta aplicación no compromete a la Universidad del Valle, fue creada por terceros con la motivación de que varios de sus servicios
