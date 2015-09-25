@@ -21,31 +21,48 @@ $ git clone ...
 
 ### Portal
 Url: http://localhost/centralapp/portal
-| Función  | Parametros  |  Semántica |  Respuesta |
-|---|---|---|---|
-|  /actualidad |  Retorna el: Estado fila restaurantes/ Estado fila tickets/ Menú del día |   | {error: ... , log: “”, estadoRestaurante : [1..5], estadoTickes : [1..5], menú : {objMenu}}  |   |
-| /votarRestaurante | voto:: int imagen :: bits (debe ser 0) |
+| Función  | Parametros  |  Semántica |  Respuesta |   |
+|---|---|---|---|---|
+|  /actualidad |  Retorna el: Estado fila restaurantes/ Estado fila tickets/ Menú del día |   | {
+error: ... ,
+log: “”,
+estadoRestaurante : [1..5],
+estadoTickes : [1..5],
+menú : {objMenu}
+}  |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
+
+
+
+
+
+
+
+/votarRestaurante
+voto:: int
+imagen :: bits (debe ser 0)
+
+
 Agrega un voto al sistema sobre el estado de los tickets
 {
 error: ... ,
 log: “”
 idImagen: id
 }
-|
 /votarTickets
-|
 voto:: int
 imagen :: bits
-|
 Agrega un voto al sistema sobre el estado de los tickets
 {
 error: ... ,
 log: “”
 idImagen: id
 }
-|
 
-### Galeria
+
+Galeria
 
 url: http://uvshop.co/centralapp/galeria
 
@@ -78,7 +95,7 @@ Devuelve las imagenes en un intervalo desde
 
 
 
-### Historial
+Historial
 url: http://uvshop.co/centralapp/historial
 
 Función
@@ -102,7 +119,7 @@ log: “”,
 registros: [registros]
 }
 
-### Menú
+Menú
 
 url: http://uvshop.co/centralapp/menu
 
@@ -134,7 +151,7 @@ log: “”,
 menus: [objMenu]
 }
 
-### Noticias
+Noticias
 
 url: http://uvshop.co/centralapp/noticias
 
@@ -152,6 +169,13 @@ error: ... ,
 log: “”,
 noticias: 
 }
+
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 
 ## Advertencia
 - Esta aplicación no compromete a la Universidad del Valle, fue creada por terceros con la motivación de que varios de sus servicios
