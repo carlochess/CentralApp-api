@@ -21,29 +21,12 @@ $ git clone ...
 
 ### Portal
 Url: http://localhost/centralapp/portal
+
 | Función  | Parametros  |  Semántica |  Respuesta |
 |---|---|---|---|
-|  /actualidad |  Retorna el: Estado fila restaurantes/ Estado fila tickets/ Menú del día |   | {error: ... , log: “”, estadoRestaurante : [1..5], estadoTickes : [1..5], menú : {objMenu}}  |   |
-| /votarRestaurante | voto:: int imagen :: bits (debe ser 0) |
-Agrega un voto al sistema sobre el estado de los tickets
-{
-error: ... ,
-log: “”
-idImagen: id
-}
-|
-/votarTickets
-|
-voto:: int
-imagen :: bits
-|
-Agrega un voto al sistema sobre el estado de los tickets
-{
-error: ... ,
-log: “”
-idImagen: id
-}
-|
+|  /actualidad |  Retorna el: Estado fila restaurantes/ Estado fila tickets/ Menú del día |   | {error: ... , log: “”, estadoRestaurante : [1..5], estadoTickes : [1..5], menú : {objMenu}}  |
+| /votarRestaurante | voto:: int imagen :: bits (debe ser 0) |  Agrega un voto al sistema sobre el estado de los tickets | {error: ... ,log: “”, idImagen: id} |
+| /votarTickets | voto:: int imagen :: bits | Agrega un voto al sistema sobre el estado de los tickets {error: ... ,log: “” idImagen: id } |
 
 ### Galeria
 

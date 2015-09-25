@@ -32,33 +32,31 @@ Url: http://localhost/centralapp/portal
 
 url: http://uvshop.co/centralapp/galeria
 
-Función
-Parametros
-Semántica
-Respuesta
-/getUltimasimagenes
-idUltimaImagen
-Devuelve las rutas de las últimas imagenes junto con los ids de las imagenes baneadas
-Ejemplo: /public/imagenes/central.jpg
+| Función | Parametros | Semántica | Respuesta |
+|---|---|---|---|
+| /getUltimasimagenes 
+| idUltimaImagen 
+| Devuelve las rutas de las últimas imagenes junto con los ids de las imagenes baneadas 
+ Ejemplo: /public/imagenes/central.jpg |
 {
 error: ... ,
 log: “”,
 imagenes: [...],
 banneadas: [...]
-}
-/denunciarFoto
-idImagen
-Permite a un usuario eliminar una foto que no cumpla con el protocolo
-{
+}|
+| /denunciarFoto 
+| idImagen
+| Permite a un usuario eliminar una foto que no cumpla con el protocolo
+|{
 error: ... ,
 log: “”,
-}
-/getImagenes
-idImagenInicial
+}|
+|/getImagenes
+|idImagenInicial
 idImagenFinal
-Devuelve las imagenes en un intervalo desde 
+|Devuelve las imagenes en un intervalo desde 
 (idImagenInicial, idImagenFinal ]
-
+|
 
 
 ### Historial
