@@ -24,13 +24,13 @@ Url: http://localhost/centralapp/portal
 
 | Función  | Parametros  |  Semántica |  Respuesta |
 |---|---|---|---|
-|  /actualidad |  Retorna el: Estado fila restaurantes/ Estado fila tickets/ Menú del día |   | {error: ... , log: “”, estadoRestaurante : [1..5], estadoTickes : [1..5], menú : {objMenu}}  |
-| /votarRestaurante | voto:: int imagen :: bits (debe ser 0) |  Agrega un voto al sistema sobre el estado de los tickets | {error: ... ,log: “”, idImagen: id} |
-| /votarTickets | voto:: int imagen :: bits | Agrega un voto al sistema sobre el estado de los tickets {error: ... ,log: “” idImagen: id } |
+|  /actualidad |  | Retorna el: Estado fila restaurantes/ Estado fila tickets/ Menú del día |  {error: ... , log: “”, estadoRestaurante : [1..5], estadoTickes : [1..5], menú : {objMenu}}  |
+| /votarRestaurante | voto:: int, imagen :: bits |  Agrega un voto al sistema sobre el estado de los tickets | {error: ... ,log: “”, idImagen: id} |
+| /votarTickets | voto:: int, imagen :: bits | Agrega un voto al sistema sobre el estado de los tickets {error: ... ,log: “”, idImagen: id } |
 
 ### Galeria
 
-url: http://uvshop.co/centralapp/galeria
+url: http://localhost/centralapp/galeria
 
 | Función | Parametros | Semántica | Respuesta |
 |---|---|---|---|
@@ -40,7 +40,7 @@ url: http://uvshop.co/centralapp/galeria
 
 
 ### Historial
-url: http://uvshop.co/centralapp/historial
+url: http://localhost/centralapp/historial
 
 | Función | Parametros | Semántica | Respuesta |
 |---|---|---|---|
@@ -49,7 +49,7 @@ url: http://uvshop.co/centralapp/historial
 
 ### Menú
 
-url: http://uvshop.co/centralapp/menu
+url: http://localhost/centralapp/menu
 
 | Función | Parametros | Semántica | Respuesta |
 |---|---|---|---|
@@ -58,7 +58,7 @@ url: http://uvshop.co/centralapp/menu
 
 ### Noticias
 
-url: http://uvshop.co/centralapp/noticias
+url: http://localhost/centralapp/noticias
 
 | Función | Parametros | Semántica | Respuesta |
 |---|---|---|---|
